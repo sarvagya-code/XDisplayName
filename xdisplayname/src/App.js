@@ -20,19 +20,19 @@ function App() {
         </div>
           <form onSubmit={handleSubmit}>
             <div style={{display : "flex", flexDirection: "column"}}>
-            <div style={{display : "flex", alignItems:"center"}}>
+            <div >
               <label>First Name:</label>
-              <input type='text' value={firstName} onChange={(e)=>setFirstName(e.target.value)} style={{height : "1rem"}}/>
+              <input type='text' value={firstName} onChange={(e)=>setFirstName(e.target.value)}/>
             </div>
             
-            <div style={{display : "flex",alignItems:"center"}}>
+            <div >
               <label>Last Name:</label>
-              <input type='text' value={lastName} onChange={(e)=>setLastName(e.target.value)} style={{height : "1rem"}}/>
+              <input type='text' value={lastName} onChange={(e)=>setLastName(e.target.value)}/>
             </div>
             <button type='submit' style={{width:"4rem"}}>Submit</button>
             </div>
           </form>
-          {firstName && lastName && submit ? (<p>Full Name: {firstName} {lastName}</p>) : <p></p>}
+          {firstName && lastName && submit ? (<p>Full Name: {firstName} {lastName}</p>) : ''}
     </div>
   );
 }
